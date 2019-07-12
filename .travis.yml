@@ -20,6 +20,10 @@ matrix:
       env: DB=MYSQL PHPUNIT_TEST=1 PDO=1
     - php: 7.3
       env: DB=PGSQL PHPUNIT_TEST=1
+    - php: 7.4snapshot
+      env: DB=MYSQL PHPUNIT_TEST=1
+  allow_failures:
+    - php: 7.4snapshot
 
 before_script:
 # Init PHP
